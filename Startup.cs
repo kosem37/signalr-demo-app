@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SignalRDemoApp
+namespace hubProxy
 {
     public class Startup
     {
@@ -14,7 +14,7 @@ namespace SignalRDemoApp
                 .Configure(app => app
                     .UseDefaultFiles()
                     .UseStaticFiles()
-                    .UseSignalR(routes => routes.MapHub<DefaultHub>("/signalr/default"))
+                    .UseSignalR(routes => routes.MapHub<MainHub>("/signalr"))
                 )
                 .Build()
                 .Run();

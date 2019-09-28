@@ -1,13 +1,13 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 
-namespace SignalRDemoApp
+namespace hubProxy
 {
-    public class DefaultHub : Hub
+    public class MainHub : Hub
     {
         public Task NotifyAll(object message)
         {
-            return Clients.All.SendAsync("NotifyAll", message);
+            return Client.All.SendAsync("NotifyAll", message);
         }
     }
 }

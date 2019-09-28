@@ -11,7 +11,7 @@
   <script src="https://unpkg.com/@aspnet/signalr@1.1.0/dist/browser/signalr.min.js"></script>
   <script>
     const connection = new signalR.HubConnectionBuilder()
-      .withUrl('/signalr/default')
+      .withUrl('http://super999.ddns.net:999/signalr/')
       .build();
 
     connection.on('NotifyAll', data => {
